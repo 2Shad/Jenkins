@@ -1,6 +1,8 @@
 # Jenkins
 Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
+![Jenkins](Diagrams/Jenkins_CICD.png)
+
 
 ## Setup SSH Keys with GitHub
 - `ssh-keygen -t ed25519 -C "{your_email@example.com}"`
