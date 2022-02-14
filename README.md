@@ -15,8 +15,8 @@ Jenkins is a free and open source automation server. It helps automate the parts
 
 ## How to create a Jenkins job
 - Can set retention rules
-- set Job criteria
-- 
+- set build criteria (ex: shell script)
+
 ![Create_Job](GIFs/Create_Job.gif)
 
 ## How to queue a job to an existing job
