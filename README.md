@@ -23,3 +23,15 @@ Jenkins is a free and open source automation server. It helps automate the parts
 - Go to the first job, configure, and choose another build project in post-build actions.
 - 
 ![Queue_Job](GIFs/Queue_Job.gif)
+
+## Connecting Jenkins to GitHub project using SSH keys.
+- create new keys using `ssh-keygen -t ed25519 -C "{your_email@example.com}"`
+- go on github project, settings, and add the public key in there as usual.
+- in jenkins for jobs that requires access to this repo you can add the private key in source management, making sure for URL using SSH, add the private key, and change `master` to `main`.
+
+## Job 1
+- add the HTTPS url for the GitHub project
+- set source control management to Git, put SSH url here and add the key as stated above.
+- GitHub hook trigger for GITScm polling for webhook.
+- add script for the job in build
+- in GitHub project, go in settings, webhooks, and add new webhook. In here as for payload url `http://13.40.2.254:8080/github-webhook/`, json for content type and save.
